@@ -1,0 +1,11 @@
+# 认证配置示例文件
+# 请复制此文件为 auth_config.yaml 并填入实际配置
+
+# 用户名
+username: "your_username"
+
+# 密码
+password: "your_password"
+
+# 服务提供商(中国电信/中国移动/中国联通/校园网)
+service: "中国电信" 
