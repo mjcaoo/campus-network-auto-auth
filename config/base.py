@@ -1,7 +1,7 @@
 import pathlib
 
 # Script configuration
-SCRIPT_DIR = pathlib.Path(r"D:\Repositories\autoauth").resolve()
+SCRIPT_DIR = pathlib.Path(__file__).parent.parent.resolve()
 LOG_DIR = SCRIPT_DIR / "logs"
 LOG_FILE = LOG_DIR / "check_auth.log"
 
