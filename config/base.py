@@ -7,6 +7,7 @@ LOG_FILE = LOG_DIR / "check_auth.log"
 
 # Network configuration
 PING_HOST = "223.5.5.5"
+CHECK_HOST = "https://www.baidu.com"
 LOGIN_GATEWAY = "http://172.208.2.102/"
 LOGIN_URL = "http://172.208.2.102/eportal/InterFace.do?method=login"
 PAGE_INFO = "http://172.208.2.102/eportal/InterFace.do?method=pageInfo"

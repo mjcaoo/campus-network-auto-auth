@@ -15,6 +15,15 @@ def is_network_available():
     except Exception:
         return False
 
+def is_network_available_by_requests():
+    """Check if the network is available by making a GET request."""
+    try:
+        response = requests.get(config["CHECK_HOST"], timeout=5)
+        return response.status_code == 200
+    except requests.RequestException:
+        return False
+
+
 def get_query_string():
     """Get the query string from the login gateway."""
     try:

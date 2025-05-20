@@ -27,6 +27,7 @@ def load_config() -> Dict[str, Any]:
         "LOG_DIR": LOG_DIR,
         "LOG_FILE": LOG_FILE,
         "PING_HOST": PING_HOST,
+        "CHECK_HOST": CHECK_HOST,
         "LOGIN_GATEWAY": LOGIN_GATEWAY,
         "LOGIN_URL": LOGIN_URL,
         "PAGE_INFO": PAGE_INFO,
