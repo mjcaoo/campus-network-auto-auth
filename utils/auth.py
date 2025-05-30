@@ -52,13 +52,15 @@ def authenticate():
         )
         logging.info(f"Encrypted password: {password_encrypted}")
 
-        data = construct_auth_data(
-            config["AUTH_CONFIG"]["username"],
-            password_encrypted,
-            config["AUTH_CONFIG"]["service"],
-            query_string
-        )
-        auth_request(data)
+        services = config["AUTH_CONFIG"]["services"]
+        for service in services:
+            data = construct_auth_data(
+                config["AUTH_CONFIG"]["username"],
+                password_encrypted,
+                service,
+                query_string
+            )
+            auth_request(data)
 
     except requests.RequestException as e:
         logging.error(f"请求失败: {e}")

@@ -1,13 +1,13 @@
 @echo off
-set TASK_NAME=Ф═║Е⌡╜Г╫▒Е╝ Ф≈╤Х╝╓Х╞│
-set SCRIPT_PATH=C:\path\to\your_script.py
-set PYTHON_PATH=C:\path\to\python.exe
+set TASK_NAME=пёт╟мЬ╤╗й╠хож╓
+set SCRIPT_PATH=%~dp0..\main.py
+set PYTHON_PATH=%~dp0..\.venv\Scripts\python.exe
 
-REM Е┬═И≥╓Е░▄Е░█Д╩╩Е┼║О╪┬Е╕┌Ф·°Е╥╡Е╜≤Е°╗О╪┴
+REM и╬ЁЩм╛цШхннЯё╗хГ╧Шря╢Фтзё╘
 schtasks /delete /tn "%TASK_NAME%" /f
 
-REM Е┬⌡Е╩╨Е╝ Ф≈╤Д╩╩Е┼║О╪▄Ф╞▐ 30 Е┬├И▓÷Х©░Х║▄Д╦─Ф╛║
+REM ╢╢╫╗╤╗й╠хннЯё╛ц© 30 ╥жжсткппр╩╢н
 schtasks /create /tn "%TASK_NAME%" /tr "\"%PYTHON_PATH%\" \"%SCRIPT_PATH%\"" /sc minute /mo 30 /f
 
-echo Е╝ Ф≈╤Д╩╩Е┼║ "%TASK_NAME%" Е┬⌡Е╩╨Ф┬░Е┼÷О╪│
+echo ╤╗й╠хннЯ "%TASK_NAME%" ╢╢╫╗Ёи╧╕ё║
 pause
